@@ -14,5 +14,21 @@ package main
 
 import "fmt"
 
+func fizzBuzz(value int) string {
+	result := ""
+	if value%3 == 0 {
+		result += "Fizz"
+	}
+
+	if value%5 == 0 {
+		result += "Buzz"
+	}
+
+	return result
+}
+
 func main() {
+	for i := 1; i <= 50; i++ {
+		fmt.Println(fmt.Sprintf(`%d: %s`, i, fizzBuzz(i)))
+	}
 }
